@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"><br><br>
+            <img src="{{Music.img.url}}" width="360" height="490"><br>
+        </div>
+        <div class="col-sm-6"><br><br><br><br><br><br>
+            <div class="card" style="width: 27rem;">
+  <div class="card-body">
+    <h5 class="card-title">Name: {{Music.name}}</h5>
+    <p class="card-text">Singer: {{Music.singer}}</p>
+      <p class="card-text">Category: {{Music.tag}}</p>
+      <audio controls>
+      <source src="/media/{{Music.file}}" type="audio/mpeg" >
+      </audio>
+
+</div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

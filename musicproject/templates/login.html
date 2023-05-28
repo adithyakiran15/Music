@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<form action="" method="post">
+  {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your desired username"><br><br>
+     <label for="password">Password:</label>
+     <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+     <input type="submit" >
+</form>
+<a href="{% url 'musicapp:register'  %}">To register</a>
+
+<div>
+    {% for message in messages %}
+{{message}}
+{% endfor %}
+</div>
+</body>
+</html>

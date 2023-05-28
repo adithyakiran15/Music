@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<br>
+<form  method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Music Name:"><br><br>
+    <label for="singer">Singer Name:</label><br>
+    <input type="text" id="singer" name="singer" placeholder="Name:"><br><br>
+    <label for="tag">Tag:</label><br>
+    <input type="text" id="tag" name="tag" placeholder="Tag:"><br><br>
+    <label for="img">Poster:</label><br>
+    <input type="file" id="img" name="img" ><br><br>
+    <label for="file">Song:</label><br>
+    <input type="file" id="file" name="file" ><br><br>
+     <a href="{% url 'musicapp:index'  %}"><input type="submit"></a>
+
+
+
+</form>
+
+
+
+
+{% endblock %}
